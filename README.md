@@ -4,7 +4,7 @@ The scripts and functions in this repository can be used to estimate the fractio
 ## Overview
 The `wc_fraction.py` script takes as input a directory of sequential images of the sea surface, performs horizon detection and stabilization, and finally determines a brightness threshold which is used to extract total whitecap coverage W from each image.
 
-The following files are imported by the main `wc_fraction.py` scripts:
+The following files are imported by the main `wc_fraction.py` script:
  - `gridding.py` Convert stabilized and geo-rectified images to regular 2D grids
  - `image_processing.py` Includes the main image processing functions 
  - `motion_correction.py` Horizon-based motion correction functions
