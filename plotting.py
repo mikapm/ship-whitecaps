@@ -59,30 +59,17 @@ def plot_whitecap_thresholds(DS, hist, L_pp, thresh_dict, mask_cv,
             ax[0,0].axvline(thresh[ii], c=colors[ii], 
                     label='{}%'.format(int(thresholds[ii])),
                     linestyle=lines[ii])
-#        ax[0,0].axvline(thresh_2, c='g',
-#                label='{}%'.format(int(thresholds[1])),
-#                linestyle='--')
-#        ax[0,0].axvline(thresh_3, c='b', 
-#                label='{}%'.format(int(thresholds[2])),
-#                linestyle=':')
+
         ax[0,0].set_xlim([0, 256])
         ax[0,0].set_title('Histogram')
         #ax[0,0].legend()
         ax[0,1].semilogx(L_pp, color='k')
         for ii in range(n_thresh):
-#            ax[0,1].semilogx(thresh[ii], L_pp[thresh[ii]], markers[ii],
-#                    label='{}%'.format(int(thresholds[ii])))
             ax[0,1].axvline(thresh[ii], c=colors[ii], 
                     label='{}%'.format(int(thresholds[ii])),
                     linestyle=lines[ii])
-#        ax[0,1].semilogx(thresh_1, L_pp[thresh_1], 'ro',
-#                label='{}%'.format(int(thresholds[0])))
-#        ax[0,1].semilogx(thresh_2, L_pp[thresh_2], 'g^',
-#                label='{}%'.format(int(thresholds[1])))
-#        ax[0,1].semilogx(thresh_3, L_pp[thresh_3], 'bs',
-#                label='{}%'.format(int(thresholds[2])))
+
         ax[0,1].set_title('$L_{pp}$', usetex=True)
-        #ax[0,1].legend()
         # Plot thresholded image grids
         for ii,r in enumerate(range(1, n_thresh+1)):
             im = np.ma.masked_where(mask_cv==0,im)
@@ -94,27 +81,13 @@ def plot_whitecap_thresholds(DS, hist, L_pp, thresh_dict, mask_cv,
                     cmap=plt.cm.gray, vmin=0, vmax=1, rasterized=True)
             ax[r,1].set_xlabel('m')
             ax[r,1].set_ylabel('m')
-#            ax[2,0].pcolormesh(x_grid, y_grid, im>thresh_2,
-#                    cmap=plt.cm.gray, vmin=0, vmax=1)
-#            ax[2,0].set_xlabel('m')
-#            ax[2,0].set_ylabel('m')
-#            ax[2,1].pcolormesh(x_grid, y_grid, im>thresh_3, 
-#                    cmap=plt.cm.gray, vmin=0, vmax=1)
-#            ax[2,1].set_xlabel('m')
-#            ax[2,1].set_ylabel('m')
+
             # Compute whitecap coverage for example plots
             wc_cov = (im>thresh[ii]).sum() / im.count()
-#            wc_cov_1 = (im>thresh_1).sum() / im.count()
-#            wc_cov_2 = (im>thresh_2).sum() / im.count()
-#            wc_cov_3 = (im>thresh_3).sum() / im.count()
+
             ax[r,0].set_title('ROI')
-            #ax[r,1].set_title('{}% threshold, W = {:.4f}'.format(
-                #thresholds[ii], wc_cov))
             ax[r,1].set_title(r'$W_i$ = {:.4f}'.format(wc_cov))
-#            ax[2,0].set_title('{}% threshold, W = {:02f}'.format(
-#                thresholds[1], wc_cov_2))
-#            ax[2,1].set_title('{}% threshold, W = {:02f}'.format(
-#                thresholds[2], wc_cov_3))
+
         # Fix settings
         for ii,a in enumerate(ax.flatten()):
             a.xaxis.set_tick_params(which='major', size=7, width=2, 
