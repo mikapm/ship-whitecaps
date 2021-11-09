@@ -28,19 +28,19 @@ The main script of wc_fraction.py performs the following operations in sequence.
 <img src="https://github.com/mikapm/ship-whitecaps/blob/main/example_figures/horizon_angles.png" width="500">
 Time series of horizon angles ($\theta$, roll and incidence angles) produced by horizon detection method.
 
-<img src="https://github.com/mikapm/stereo-wave/blob/master/sw_pyfuns/whitecaps/example_figures/min_area_bbox.png" width="500">
+<img src="https://github.com/mikapm/ship-whitecaps/blob/main/example_figures/min_area_bbox.png" width="500">
 Largest common ROI box overlaid on image with smallest area visible.
 
-<img src="https://github.com/mikapm/stereo-wave/blob/master/sw_pyfuns/whitecaps/example_figures/rectified_box_resolution.png" width="500">
+<img src="https://github.com/mikapm/ship-whitecaps/blob/main/example_figures/rectified_box_resolution.png" width="500">
 Pixel x and y resolutions of geo-rectified projection. Used to define smallest acceptable grid resolution.
 
-<img src="https://github.com/mikapm/stereo-wave/blob/master/sw_pyfuns/whitecaps/example_figures/reprojected_images_001.png" width="500">
+<img src="https://github.com/mikapm/ship-whitecaps/blob/main/example_figures/reprojected_images_001.png" width="500">
 Original, horizon-stabilized and geo-rectified & gridded input images.
 
 
-<img src="https://github.com/mikapm/stereo-wave/blob/master/sw_pyfuns/whitecaps/example_figures/thresh_example_80cm_042.png" width="500">
+<img src="https://github.com/mikapm/ship-whitecaps/blob/main/example_figures/thresh_example_80cm_042.png" width="500">
 Average pixel intensity histogram (normalized), second derivative of log of histogram L_pp (see Kleiss and Melville 2011, JTECH) and 3 different percentage-thresholds (percentages below last L_pp peak); original geo-rectified grid and three thresholded grids using the thresholds displayed in the top two plots.
 
-<img src="https://github.com/mikapm/stereo-wave/blob/master/sw_pyfuns/whitecaps/example_figures/w_tot.png" width="500">
+<img src="https://github.com/mikapm/ship-whitecaps/blob/main/example_figures/w_tot.png" width="500">
 Time series of total whitecap coverage W_tot from using the specified precentage-threshold.
 
