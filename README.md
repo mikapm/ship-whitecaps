@@ -1,5 +1,5 @@
 # Codes for analysing whitecap coverage from moving platforms
-The scripts and functions in this repository can be used to estimate the fractional whitecap coverage $W$ from sequential images acquired from moving platforms such as ships. The motion correction is performed with the horizon-detection algorithm published by [Schwendeman and Thomson (2015)](https://doi.org/10.1175/JTECH-D-14-00047.1), and the whitecap thresholding is performed following [Kleiss and Melville (2011)](https://doi.org/10.1175/2010JTECHO744.1).
+The scripts and functions in this repository can be used to estimate the fractional whitecap coverage from sequential images acquired from moving platforms such as ships. The motion correction is performed with the horizon-detection algorithm published by [Schwendeman and Thomson (2015)](https://doi.org/10.1175/JTECH-D-14-00047.1), and the whitecap thresholding is performed following [Kleiss and Melville (2011)](https://doi.org/10.1175/2010JTECHO744.1).
 
 ## Overview
 The `wc_fraction.py` script takes as input a directory of sequential images of the sea surface, performs horizon detection and stabilization, and finally determines a brightness threshold which is used to extract total whitecap coverage W from each image.
